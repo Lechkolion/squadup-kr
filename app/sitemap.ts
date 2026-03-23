@@ -20,7 +20,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       .order('updated_at', { ascending: false })
       .limit(500);
 
-    const profileRoutes = (profiles || []).map(p => ({
+    const profileRoutes = (profiles || []).map((p: { id: string; updated_at: string }) => ({
       url: `${appUrl}/profile/${p.id}`,
       lastModified: new Date(p.updated_at),
       changeFrequency: 'weekly' as const,

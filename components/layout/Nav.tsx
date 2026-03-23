@@ -74,8 +74,8 @@ export function Nav() {
         schema: 'public',
         table: 'notifications',
         filter: `profile_id=eq.${profile.id}`,
-      }, (payload) => {
-        setNotifications(prev => [payload.new as Notification, ...prev.slice(0, 9)]);
+      }, (payload: { new: Notification }) => {
+        setNotifications(prev => [payload.new, ...prev.slice(0, 9)]);
       })
       .subscribe();
 

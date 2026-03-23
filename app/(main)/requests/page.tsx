@@ -3,7 +3,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import toast from 'react-hot-toast';
-import { Users, Inbox, Send, Clock } from 'lucide-react';
+import { Users, Inbox, Send, Clock, type LucideIcon } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import { Avatar } from '@/components/ui/Avatar';
 import { Badge, MatchBadge, StatusBadge } from '@/components/ui/Badge';
@@ -483,7 +483,7 @@ function EmptyState({
   message,
   sub,
 }: {
-  icon: React.ComponentType<{ size?: number; style?: React.CSSProperties }>;
+  icon: LucideIcon;
   message: string;
   sub: string;
 }) {

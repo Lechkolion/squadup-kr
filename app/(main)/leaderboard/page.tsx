@@ -5,24 +5,21 @@ import LeaderboardClient from './LeaderboardClient';
 
 export const revalidate = 300; // revalidate every 5 minutes
 
-interface LeaderboardEntry {
+interface ProfileRow {
   id: string;
   discord_id: string;
   username: string;
   avatar_url: string | null;
+}
+
+interface LeaderboardEntry extends ProfileRow {
   score: number;
 }
 
 async function fetchLeaderboards() {
   const supabase = createClient();
 
-  // Most Connections: count from connections table
-  const { data: connectionCounts } = await supabase
-    .rpc('get_connection_counts')
-    .limit(20)
-    .catch(() => ({ data: null }));
-
-  // Fallback: fetch profiles ordered by a proxy (we compute from connections)
+  // Fetch profiles ordered by a proxy (we compute connections from the connections table)
   const { data: profiles } = await supabase
     .from('profiles')
     .select('id, discord_id, username, avatar_url')
@@ -61,24 +58,24 @@ async function fetchLeaderboards() {
     helpfulCountMap.set(r.from_profile_id, (helpfulCountMap.get(r.from_profile_id) ?? 0) + 1);
   });
 
-  const allProfiles = profiles ?? [];
+  const allProfiles: ProfileRow[] = (profiles ?? []) as ProfileRow[];
 
   // Build leaderboard arrays
   const mostConnections: LeaderboardEntry[] = allProfiles
-    .map((p) => ({ ...p, score: connectionCountMap.get(p.id) ?? 0 }))
-    .filter((p) => p.score > 0)
-    .sort((a, b) => b.score - a.score)
+    .map((p: ProfileRow) => ({ ...p, score: connectionCountMap.get(p.id) ?? 0 }))
+    .filter((p: LeaderboardEntry) => p.score > 0)
+    .sort((a: LeaderboardEntry, b: LeaderboardEntry) => b.score - a.score)
     .slice(0, 20);
 
-  const mostActive: LeaderboardEntry[] = (activeProfiles ?? []).map((p, i) => ({
+  const mostActive: LeaderboardEntry[] = ((activeProfiles ?? []) as ProfileRow[]).map((p: ProfileRow, i: number) => ({
     ...p,
-    score: 20 - i, // rank-based score since recency is the sort key
+    score: 20 - i,
   }));
 
   const mostHelpful: LeaderboardEntry[] = allProfiles
-    .map((p) => ({ ...p, score: helpfulCountMap.get(p.id) ?? 0 }))
-    .filter((p) => p.score > 0)
-    .sort((a, b) => b.score - a.score)
+    .map((p: ProfileRow) => ({ ...p, score: helpfulCountMap.get(p.id) ?? 0 }))
+    .filter((p: LeaderboardEntry) => p.score > 0)
+    .sort((a: LeaderboardEntry, b: LeaderboardEntry) => b.score - a.score)
     .slice(0, 20);
 
   return { mostConnections, mostActive, mostHelpful };

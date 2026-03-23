@@ -3,7 +3,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Users, Bell, ExternalLink, Gamepad2, Zap } from 'lucide-react';
+import { Users, Bell, ExternalLink, Gamepad2, Zap, type LucideIcon } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import { Avatar } from '@/components/ui/Avatar';
 import { Badge } from '@/components/ui/Badge';
@@ -355,7 +355,7 @@ function StatPill({
   label,
   color,
 }: {
-  icon: React.ComponentType<{ size?: number }>;
+  icon: LucideIcon;
   value: number;
   label: string;
   color: string;

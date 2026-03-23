@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Trophy, Flame, Heart } from 'lucide-react';
+import { Trophy, Flame, Heart, type LucideIcon } from 'lucide-react';
 import { Avatar } from '@/components/ui/Avatar';
 
 interface LeaderboardEntry {
@@ -22,7 +22,7 @@ interface Props {
   mostHelpful: LeaderboardEntry[];
 }
 
-const TABS: Array<{ key: TabKey; label: string; labelKo: string; icon: React.ComponentType<{ size?: number }> }> = [
+const TABS: Array<{ key: TabKey; label: string; labelKo: string; icon: LucideIcon }> = [
   { key: 'connections', label: 'Most Connected', labelKo: '최다 연결', icon: Trophy },
   { key: 'active', label: 'Most Active', labelKo: '최다 활동', icon: Flame },
   { key: 'helpful', label: 'Most Helpful', labelKo: '최다 도움', icon: Heart },
