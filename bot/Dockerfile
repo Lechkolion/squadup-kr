@@ -1,0 +1,28 @@
+FROM node:20-alpine AS base
+RUN apk add --no-cache libc6-compat
+
+FROM base AS deps
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN npm run build
+
+FROM base AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+
+RUN addgroup --system --gid 1001 botgroup
+RUN adduser --system --uid 1001 botuser
+
+COPY --from=builder --chown=botuser:botgroup /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+COPY package*.json ./
+
+USER botuser
+
+CMD ["node", "dist/index.js"]

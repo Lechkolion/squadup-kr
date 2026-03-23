@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "browse": "찾아보기",
+    "dashboard": "내 스쿼드",
+    "requests": "요청함",
+    "leaderboard": "리더보드",
+    "profile": "프로필",
+    "editProfile": "프로필 수정",
+    "logout": "로그아웃"
+  },
+  "landing": {
+    "headline": "스쿼드를 찾아라",
+    "subKo": "한국 게이머를 위한 팀 찾기",
+    "subEn": "The squad finder built for Korean gamers",
+    "cta": "디스코드로 로그인",
+    "onlineCount": "지금 {count}명의 게이머가 온라인",
+    "howItWorks": "이용 방법",
+    "step1Title": "프로필 만들기",
+    "step1Desc": "게임, 랭크, 플레이 스타일을 설정하세요",
+    "step2Title": "찾아보기 & 매칭",
+    "step2Desc": "스마트 알고리즘으로 맞는 플레이어를 찾으세요",
+    "step3Title": "연결 & 플레이",
+    "step3Desc": "디스코드에서 연결하고 함께 플레이하세요",
+    "supportedGames": "지원 게임"
+  },
+  "browse": {
+    "title": "게이머 찾기",
+    "searchPlaceholder": "닉네임으로 검색...",
+    "onlineOnly": "온라인만",
+    "filters": "필터",
+    "clearFilters": "필터 초기화",
+    "sortBestMatch": "최적 매칭",
+    "sortMostRecent": "최신순",
+    "sortOnlineFirst": "온라인 우선",
+    "noResults": "조건에 맞는 게이머가 없습니다.",
+    "loadMore": "더 보기"
+  },
+  "profile": {
+    "connections": "{count}명의 스쿼드원",
+    "memberSince": "{date}부터 활동",
+    "activeHours": "보통 {hours}에 온라인",
+    "sendRequest": "스쿼드 요청 보내기",
+    "editProfile": "프로필 수정",
+    "inSquad": "스쿼드에 있음 ✅",
+    "requestSent": "요청 전송됨 ⏳",
+    "messagePlaceholder": "메시지 추가 (선택)...",
+    "discordRevealHint": "연결 후 디스코드 태그 확인 가능"
+  },
+  "editProfile": {
+    "title": "프로필 수정",
+    "step1": "기본 정보",
+    "step2": "게임",
+    "step3": "플레이 스타일",
+    "step4": "디스코드",
+    "next": "다음",
+    "back": "이전",
+    "save": "저장",
+    "bioLabel": "소개",
+    "bioPlaceholder": "다른 게이머에게 자신을 소개해 보세요...",
+    "bioLimit": "{count}/280",
+    "usernameLabel": "닉네임",
+    "regionLabel": "지역",
+    "languageLabel": "언어",
+    "gamesLabel": "플레이 게임",
+    "rankLabel": "랭크",
+    "hoursLabel": "플레이 시간",
+    "playStyleLabel": "플레이 스타일",
+    "activeHoursLabel": "활동 시간 (KST)",
+    "profileComplete": "프로필 {percent}% 완성",
+    "joinServer": "SquadUp KR 디스코드 참가",
+    "showOnlineStatus": "온라인 상태 공개",
+    "allowRequests": "모든 사용자로부터 스쿼드 요청 허용"
+  },
+  "requests": {
+    "title": "스쿼드 요청",
+    "incoming": "받은 요청",
+    "outgoing": "보낸 요청",
+    "accept": "수락",
+    "decline": "거절",
+    "cancel": "취소",
+    "pending": "대기 중",
+    "accepted": "수락됨",
+    "declined": "거절됨",
+    "empty": "요청이 없습니다",
+    "matchScore": "{score}% 매칭"
+  },
+  "dashboard": {
+    "title": "내 스쿼드",
+    "totalConnections": "총 {count}명",
+    "activity": "활동 피드",
+    "noConnections": "아직 스쿼드원이 없습니다. 찾아보세요!"
+  },
+  "leaderboard": {
+    "title": "리더보드",
+    "mostConnections": "연결 많은 순",
+    "mostActive": "활동 많은 순",
+    "mostHelpful": "도움 많은 순",
+    "thisWeek": "이번 주",
+    "rank": "순위",
+    "player": "플레이어",
+    "score": "점수"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다",
+    "retry": "다시 시도",
+    "online": "온라인",
+    "offline": "오프라인",
+    "ko": "한국어",
+    "en": "영어",
+    "both": "모두"
+  },
+  "toast": {
+    "requestSent": "스쿼드 요청을 보냈습니다!",
+    "requestAccepted": "요청 수락! 스쿼드 결성 🎉",
+    "requestDeclined": "요청을 거절했습니다",
+    "profileSaved": "프로필이 저장되었습니다!",
+    "error": "오류가 발생했습니다. 다시 시도해 주세요."
+  }
+}

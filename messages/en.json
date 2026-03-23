@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "browse": "Browse",
+    "dashboard": "Dashboard",
+    "requests": "Requests",
+    "leaderboard": "Leaderboard",
+    "profile": "Profile",
+    "editProfile": "Edit Profile",
+    "logout": "Log Out"
+  },
+  "landing": {
+    "headline": "FIND YOUR SQUAD",
+    "subKo": "한국 게이머를 위한 팀 찾기",
+    "subEn": "The squad finder built for Korean gamers",
+    "cta": "LOGIN WITH DISCORD",
+    "onlineCount": "{count} gamers online right now",
+    "howItWorks": "How It Works",
+    "step1Title": "Create Your Profile",
+    "step1Desc": "Set up your games, rank, and play style",
+    "step2Title": "Browse & Match",
+    "step2Desc": "Find compatible players with our smart algorithm",
+    "step3Title": "Connect & Play",
+    "step3Desc": "Connect on Discord and start playing together",
+    "supportedGames": "Supported Games"
+  },
+  "browse": {
+    "title": "Find Gamers",
+    "searchPlaceholder": "Search by username...",
+    "onlineOnly": "Online Only",
+    "filters": "Filters",
+    "clearFilters": "Clear Filters",
+    "sortBestMatch": "Best Match",
+    "sortMostRecent": "Most Recent",
+    "sortOnlineFirst": "Online First",
+    "noResults": "No gamers found matching your filters.",
+    "loadMore": "Load More"
+  },
+  "profile": {
+    "connections": "{count} connections",
+    "memberSince": "Member since {date}",
+    "activeHours": "Usually online {hours}",
+    "sendRequest": "Send Squad Request",
+    "editProfile": "Edit Profile",
+    "inSquad": "In Your Squad",
+    "requestSent": "Request Sent",
+    "messagePlaceholder": "Add a message (optional)...",
+    "discordRevealHint": "Connect to see Discord tag"
+  },
+  "editProfile": {
+    "title": "Edit Profile",
+    "step1": "Basic Info",
+    "step2": "Your Games",
+    "step3": "Play Style",
+    "step4": "Discord",
+    "next": "Next",
+    "back": "Back",
+    "save": "Save Profile",
+    "bioLabel": "Bio",
+    "bioPlaceholder": "Tell other gamers about yourself...",
+    "bioLimit": "{count}/280",
+    "usernameLabel": "Display Name",
+    "regionLabel": "Region",
+    "languageLabel": "Languages",
+    "gamesLabel": "Your Games",
+    "rankLabel": "Rank",
+    "hoursLabel": "Hours Played",
+    "playStyleLabel": "Play Style",
+    "activeHoursLabel": "Active Hours (KST)",
+    "profileComplete": "Profile {percent}% complete",
+    "joinServer": "Join SquadUp KR Discord",
+    "showOnlineStatus": "Show online status to others",
+    "allowRequests": "Allow squad requests from everyone"
+  },
+  "requests": {
+    "title": "Squad Requests",
+    "incoming": "Incoming",
+    "outgoing": "Outgoing",
+    "accept": "Accept",
+    "decline": "Decline",
+    "cancel": "Cancel",
+    "pending": "Pending",
+    "accepted": "Accepted",
+    "declined": "Declined",
+    "empty": "No requests yet",
+    "matchScore": "{score}% match"
+  },
+  "dashboard": {
+    "title": "My Squad",
+    "totalConnections": "{count} total connections",
+    "activity": "Activity Feed",
+    "noConnections": "No squad members yet. Start browsing!"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "mostConnections": "Most Connections",
+    "mostActive": "Most Active",
+    "mostHelpful": "Most Helpful",
+    "thisWeek": "This Week",
+    "rank": "Rank",
+    "player": "Player",
+    "score": "Score"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try Again",
+    "online": "Online",
+    "offline": "Offline",
+    "ko": "Korean",
+    "en": "English",
+    "both": "Both"
+  },
+  "toast": {
+    "requestSent": "Squad request sent!",
+    "requestAccepted": "Request accepted! Squad formed 🎉",
+    "requestDeclined": "Request declined",
+    "profileSaved": "Profile saved!",
+    "error": "Something went wrong. Please try again."
+  }
+}
