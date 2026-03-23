@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { Avatar } from '@/components/ui/Avatar';
 import LeaderboardClient from './LeaderboardClient';
 
-export const revalidate = 300; // revalidate every 5 minutes
+export const dynamic = 'force-dynamic';
 
 interface ProfileRow {
   id: string;

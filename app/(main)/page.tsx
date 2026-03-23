@@ -7,7 +7,7 @@ import { createClient } from '@/lib/supabase/server';
 import { LiveCounter } from '@/components/ui/LiveCounter';
 import { RecentSquads } from '@/components/ui/RecentSquads';
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 async function getOnlineCount() {
   const supabase = createClient();

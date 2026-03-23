@@ -1,4 +1,6 @@
 import { notFound } from 'next/navigation';
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { Calendar, Globe, Users, Clock } from 'lucide-react';
 import { createClient } from '@/lib/supabase/server';

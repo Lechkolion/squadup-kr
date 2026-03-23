@@ -1,5 +1,14 @@
 import { MetadataRoute } from 'next';
-import { createClient } from '@/lib/supabase/server';
+
+// Sitemap is generated at request time, not build time
+export const dynamic = 'force-dynamic';
+
+// Lazy import to avoid build-time Supabase errors
+async function getSupabaseClient() {
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL) return null;
+  const { createClient } = await import('@/lib/supabase/server');
+  return createClient();
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://squadup-kr.up.railway.app';
@@ -12,7 +21,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   try {
-    const supabase = createClient();
+    const supabase = await getSupabaseClient();
+    if (!supabase) return staticRoutes;
     const { data: profiles } = await supabase
       .from('profiles')
       .select('id, updated_at')
